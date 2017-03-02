@@ -28,7 +28,7 @@ int main()
 
         rlist = quicksort(rlist, 0, size - 1, pcount);
 
-        cout << "Quicksort for array [" << i + 1 << "] made " << count << " comparison\n\n";
+        cout << "Quicksort for array [" << i + 1 << "] made " << count << " comparisons\n\n";
 
     }
 
