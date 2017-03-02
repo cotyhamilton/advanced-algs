@@ -17,14 +17,14 @@ int main()
     int count;
     int *pcount = &count;
     const int size = 5000;
-    int list[size];
     int *rlist;
+    rlist = new int[size];
 
     for(int i = 0; i < 10; i++)
     {
         count = 0;
         
-        rlist = fillRandomArray(list,size);
+        rlist = fillRandomArray(rlist,size);
 
         rlist = quicksort(rlist, 0, size - 1, pcount);
 
@@ -33,6 +33,9 @@ int main()
     }
 
     // print(rlist, size);
+
+    delete [] rlist;
+    rlist = NULL;
 
     return 0;
 }
