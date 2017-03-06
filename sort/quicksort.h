@@ -1,3 +1,7 @@
+/*
+Coty Hamilton
+*/
+
 #ifndef quicksort_h
 #define quicksort_h
 
