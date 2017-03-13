@@ -1,39 +1,64 @@
-#ifndef bstree_h
-#define bstree_h
+#ifndef BSTREE_H
+#define BSTREE_H
 
 class Bstree 
 {
     private:
-        struct TreeNode
+        class TreeNode
         {
+            friend class Bstree;
             int key;
             int height;
             int depth;
             int size;
             TreeNode *parent;
-            TreeNode *leftChild;
-            TreeNode *rightChild;
+            TreeNode *left;
+            TreeNode *right;
 
-            TreeNode(int k; TreeNode *p, TreeNode *lc, TreeNode *rc);
-            ~TreeNode();
-        }
+            TreeNode(int num, TreeNode *p = NULL, TreeNode *lc = NULL, TreeNode *rc = NULL)
+            {
+                key = num;
+                parent = p;
+                left = lc;
+                right = rc;
+            }
+        };
         TreeNode *root;
+
+        void insert(TreeNode *&, int);
+        void destroySubtree(TreeNode *);
+        void remove(TreeNode *&, int);
+        void makeDeletion(TreeNode *&);
+        void displayInOrder(TreeNode *);
+        void displayPreOrder(TreeNode *);
+        void displayPostOrder(TreeNode *);
     public:
-        Bstree();
-        ~Bstree();
-        void insert(int x);
-        void delete(TreeNode *x);
-        TreeNode predecessor(TreeNode *x);
-        TreeNode successor(TreeNode *x);
-        int height(TreeNode *x);
-        TreeNode search(int x);
-        TreeNode minimum(TreeNode *x);
-        TreeNode maximum(TreeNode *x);
-        void print2D();
-        void findDepth();
-        void findHeight();
-        void findSize();
-        bool isBalanced();
-}
+        Bstree()
+        {
+            root = NULL;
+        }
+
+        ~Bstree()
+        {
+            destroySubtree(root);
+        }
+
+        void insert(int);
+        void remove(int);
+        // TreeNode predecessor(TreeNode *);
+        // TreeNode successor(TreeNode *);
+        // int height(TreeNode *);
+        bool search(int);
+        // TreeNode minimum(TreeNode *);
+        // TreeNode maximum(TreeNode *);
+        // void print2D();
+        // void findDepth();
+        // void findHeight();
+        // void findSize();
+        // bool isBalanced();
+        void showInOrder(void);
+        void showPreOrder();
+        void showPostOrder();
+};
 
 #endif
