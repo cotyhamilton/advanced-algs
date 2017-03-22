@@ -1,4 +1,6 @@
 // g++ -o main main.cpp bstree.cpp
+// Coty Hamilton
+// main.cpp
 
 #include <iostream>
 #include <string>
