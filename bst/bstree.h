@@ -25,40 +25,36 @@ class Bstree
         };
         TreeNode *root;
 
-        void insert(TreeNode *&, int);
-        void destroySubtree(TreeNode *);
-        void remove(TreeNode *&, int);
-        void makeDeletion(TreeNode *&);
-        void displayInOrder(TreeNode *);
-        void displayPreOrder(TreeNode *);
-        void displayPostOrder(TreeNode *);
+        void transplant(TreeNode *, TreeNode *);
+        TreeNode* find(int);
+        void findDepth(TreeNode *);
+        int depth(TreeNode *);
+        void findHeight(TreeNode*);
+        int height(TreeNode *);
+        void findSize(TreeNode *);
+        int size(TreeNode *);
+        TreeNode* minimum(int);
+        TreeNode* maximum(int);
+        void print2D(TreeNode *, int);
+        int isBalanced(TreeNode *);
     public:
         Bstree()
         {
             root = NULL;
         }
-
-        ~Bstree()
-        {
-            destroySubtree(root);
-        }
-
         void insert(int);
         void remove(int);
-        // TreeNode predecessor(TreeNode *);
-        // TreeNode successor(TreeNode *);
-        // int height(TreeNode *);
+        int predecessor(int);
+        int successor(int);
+        int depth(int);
+        int height(int);
+        int size(int);
+        int minimum();
+        int maximum();
+        void print2D();
+        bool isBalanced();
         bool search(int);
-        // TreeNode minimum(TreeNode *);
-        // TreeNode maximum(TreeNode *);
-        // void print2D();
-        // void findDepth();
-        // void findHeight();
-        // void findSize();
-        // bool isBalanced();
-        void showInOrder(void);
-        void showPreOrder();
-        void showPostOrder();
+        bool isEmpty();
 };
 
 #endif
