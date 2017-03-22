@@ -184,7 +184,7 @@ void Bstree::insert(int num)
     else
     {
         TreeNode *tree = root;
-        TreeNode *newParent;
+        TreeNode *newParent = NULL;
         //trailing pointer
         TreeNode *newNode = new TreeNode(num);
 

@@ -1,6 +1,7 @@
 // g++ -o main main.cpp bstree.cpp
 
 #include <iostream>
+#include <string>
 #include "bstree.h"
 
 using namespace std;
