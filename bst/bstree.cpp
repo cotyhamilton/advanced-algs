@@ -1,3 +1,6 @@
+// Coty Hamilton
+// bstree.cpp
+
 #include <iostream>
 #include <algorithm>
 #include <cmath>
