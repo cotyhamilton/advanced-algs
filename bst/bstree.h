@@ -1,3 +1,6 @@
+// Coty Hamilton
+// bstree.h
+
 #ifndef BSTREE_H
 #define BSTREE_H
 
