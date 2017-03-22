@@ -167,7 +167,26 @@ int Bstree::isBalanced(TreeNode *tree)
     {
         return 0;
     }
-    if (std::abs(tree->left->height - tree->right->height) > 1 )
+    
+    int lh, rh;
+
+    if (tree->left)
+    {
+        lh = tree->left->height;
+    }
+    else
+    {
+        lh = 0;
+    }
+    if (tree->right)
+    {
+        rh = tree->right->height;
+    }
+    else
+    {
+        rh = 0;
+    }
+    if (std::abs(lh - rh) > 1 )
     {
         return -1;
     }

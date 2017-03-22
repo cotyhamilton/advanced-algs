@@ -42,16 +42,19 @@ int main()
         switch(option)
         {
             case 0: break;
-            case 1: cout <<"\n   enter a value to insert: ";
-                    cin >> key;
-                    if (tree.search(key))
+            case 1: int num;
+                    cout << "\n   how many values would you like to insert: ";
+                    cin >> num;
+                    cout << "\n   enter value(s):\n";
+
+                    for (int i = 0; i < num; ++i)
                     {
-                        status = "\n   node already exists";
-                    }
-                    else
-                    {
-                        tree.insert(key);
-                        status = "\n   " + to_string(key) + " was inserted";
+                        cin >> key;
+                        if (!tree.search(key))
+                        {
+                            tree.insert(key);
+                            status = "\n   values were inserted";
+                        }
                     }
                     break;
             case 2: cout <<"\n   enter the value of the node to deleted: ";
