@@ -1,10 +1,11 @@
-// g++ -o main main.cpp bstree.cpp
+// g++ -o main main.cpp bstree.cpp avltree.cpp
 // Coty Hamilton
 // main.cpp
 
 #include <iostream>
 #include <string>
 #include "bstree.h"
+#include "avltree.h"
 
 using namespace std;
 

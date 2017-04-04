@@ -14,6 +14,7 @@ class Bstree
             int height;
             int depth;
             int size;
+            int balance;
             TreeNode *parent;
             TreeNode *left;
             TreeNode *right;
