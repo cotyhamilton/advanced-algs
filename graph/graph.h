@@ -2,6 +2,8 @@
 #define GRAPH_H
 
 #include <string>
+#include <stack>
+#include <queue>
 
 class Graph
 {
@@ -24,15 +26,7 @@ private:
         }
     };
     
-    int (*matrix)[6];
-    Node* (*list)[6];
-    void BFSp();
-public:
-    void BFS();
-    void DFS();
-    Graph()
-    {
-        int a[6][6] = {
+    int matrix[6][6] = {
                 {0,1,1,1,0,0},
                 {1,0,0,0,1,1},
                 {1,0,0,0,0,1},
@@ -40,15 +34,26 @@ public:
                 {0,1,0,0,0,0},
                 {0,1,1,0,0,0}
             };
-        matrix = a;
-        Node *A = new Node('A',0);
-        Node *B = new Node('B',1);
-        Node *C = new Node('C',2);
-        Node *D = new Node('D',3);
-        Node *E = new Node('E',4);
-        Node *F = new Node('F',5);
-        Node* ar[6] = {A,B,C,D,E,F};
-        list = &ar;
+    Node* list[6];
+
+    std::queue<char> Q;
+    std::stack<char> S;
+
+
+    void BFSp();
+    void DFSp();
+    void reset();
+public:
+    void BFS();
+    void DFS();
+    Graph()
+    {
+        list[0] = new Node('A',0);
+        list[1] = new Node('B',1);
+        list[2] = new Node('C',2);
+        list[3] = new Node('D',3);
+        list[4] = new Node('E',4);
+        list[5] = new Node('F',5);
     }
 };
 

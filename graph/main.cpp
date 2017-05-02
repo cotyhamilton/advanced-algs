@@ -14,6 +14,7 @@ int main() {
     Graph graph;
 
     graph.BFS();
+    graph.DFS();
 
 
 

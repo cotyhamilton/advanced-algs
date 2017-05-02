@@ -4,15 +4,84 @@
 
 void Graph::BFSp()
 {
-    std::cout << list[1] << std::endl;
+    Q.push(0);
+    while (!Q.empty())
+    {
+        int current = Q.front();
+
+        for (int i = 0; i < 6; i++)
+        {
+            if (matrix[current][i])
+            {
+                if (list[i]->color == "white")
+                {
+                    list[i]->color = "grey";
+                    Q.push(i);
+                    
+                }
+            }
+        }
+        std::cout << list[Q.front()]->name;
+        list[Q.front()]->color = "black";
+        Q.pop();
+    }
+}
+
+void Graph::DFSp()
+{
+    S.push(0);
+    std::cout << list[0]->name;
+    list[0]->color = "grey";
+    while (!S.empty())
+    {
+        int current = S.top();
+        int i = 0;
+        while(i < 6)
+        {
+            if(matrix[current][i])
+            {
+
+            }
+            if (i > 5 || list[i]->color == "white")
+            {
+                break;
+            }
+            i++;
+        }
+        if (list[i]->color == "white")
+        {
+            std::cout << list[i]->name;
+            list[i]->color = "gray";
+            S.push(i);
+        }
+        else
+        {
+            S.pop();
+        }
+    }
+
+}
+
+void Graph::reset()
+{
+    for (int i = 0; i < 6; i++)
+    {
+        list[i]->color = "white";
+    }
 }
 
 void Graph::BFS()
 {
+    std::cout << "BFS results: \n";
     BFSp();
+    std::cout << std::endl;
+    reset();
 }
 
 void Graph::DFS()
 {
-
+    std::cout << "DFS results: \n";
+    DFSp();
+    std::cout << std::endl;
+    reset();
 }
