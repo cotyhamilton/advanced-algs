@@ -16,46 +16,6 @@ int main() {
     graph.BFS();
     graph.DFS();
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-    // queue<int> Q;
-
-    // int a[SIZE][SIZE] = {
-    //                     {0,1,1,1},
-    //                     {1,0,1,1},
-    //                     {1,1,0,1},
-    //                     {1,1,1,0}
-    //                     };
-
-    // int (*matrix)[SIZE] = a;
-
-    // print(matrix);
-
     return 0;
 }
-
-
-
-
-
-
-// void print(int (*matrix)[SIZE]) {
-//     for (int i = 0; i < SIZE; i++) {
-//         for (int j = 0; j < SIZE; j++) {
-//             cout << matrix[i][j];
-//         }
-//         cout << endl;
-//     }
-// }
 

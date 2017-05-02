@@ -18,7 +18,6 @@ private:
         Node(char n, int i)
         {
             name = n;
-            index = i;
             p = NULL;
             d = 0;
             f = 0;

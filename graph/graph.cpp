@@ -38,23 +38,16 @@ void Graph::DFSp()
         int i = 0;
         while(i < 6)
         {
-            if(matrix[current][i])
+            if (matrix[current][i] && list[i]->color == "white")
             {
-
-            }
-            if (i > 5 || list[i]->color == "white")
-            {
+                std::cout << list[i]->name;
+                list[i]->color = "gray";
+                S.push(i);
                 break;
             }
             i++;
         }
-        if (list[i]->color == "white")
-        {
-            std::cout << list[i]->name;
-            list[i]->color = "gray";
-            S.push(i);
-        }
-        else
+        if (i == 6)
         {
             S.pop();
         }
