@@ -1,4 +1,7 @@
-// g++ -o main main.cpp graph.cpp
+// Coty Hamilton
+
+// g++ -o main main.cpp graph.cpp -std=c++11
+
 
 #include <iostream>
 #include "graph.h"

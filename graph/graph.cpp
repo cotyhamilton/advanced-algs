@@ -1,3 +1,5 @@
+// Coty Hamilton
+
 #include <iostream>
 #include <typeinfo>
 #include "graph.h"
